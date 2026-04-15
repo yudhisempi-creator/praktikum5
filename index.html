@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-container">
+            <h2>Yudhistira Empi</h2>
+            <div class="nav-menu">
+                <a href="#">Tentang</a>
+                <a href="#">Skill</a>
+                <a href="#">Proyek</a>
+                <a href="#">Kontak</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" style="text-align: center; padding: 20px;">
+        <img src="ydhs.jpeg" alt="Profile">
+        <p>CEO KFC, UI/UX Designer & Frontend Developer</p>
+    </section>
+
+    <!-- Tentang -->
+    <section style="max-width:1000px; margin:auto; padding:20px;">
+        <h3>Tentang Saya</h3>
+        <article>
+            Saya adalah mahasiswa yang fokus pada UI/UX Design dan Frontend Development. Dengan cara hidup seperti Larry.
+            Saya terbiasa merancang antarmuka yang sederhana dan intuitif, lalu
+            mengimplementasikannya menjadi website yang responsif dan mudah digunakan.
+        </article>
+    </section>
+
+    <!-- Skill -->
+    <section style="max-width:1000px; margin:auto; padding:20px;">
+        <h3>Keahlian</h3>
+        <div class="skll-conteiner">
+            <article>
+                <h4>UI/UX</h4>
+                <ul>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>User Flow</li>
+                </ul>
+            </article>
+            <br>
+            <article>
+                <h4>Frontend</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Responsive</li>
+                </ul>
+            </article>
+            <br>
+            <article>
+                <h4>Tools</h4>
+                <ul>
+                    <li>Figma</li>
+                    <li>VS Code</li>
+                    <li>Canva</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Proyek -->
+    <section style="max-width:1000px; margin:auto; padding:20px;">
+        <h3>Proyek</h3>
+        <div class="project-countainer">
+            <article>
+                <h4>BeFit</h4>
+                <p>Aplikasi olahraga berbasis tantangan</p>
+            </article>
+            <br>
+            <article>
+                <h4>Web SpoorGo</h4>
+                <p>Aplikasi pemesanan kereta api</p>
+            </article>
+            <br>
+            <article>
+                <h4>NeoBidan</h4>
+                <p>Aplikasi cek kesehatan khusus untuk ibu hamil</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="form" style="max-width:1000px; margin:auto; padding:20px;">
+        <h3>Form Pendaftaran</h3>
+
+        <form id="formPendaftaran">
+            <input type="text" placeholder="Nama" id="nama" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="text" placeholder="No. HP" id="nohp" required>
+            <label>Kategori:</label>
+
+        <select id="kategori" required>
+            <option value="">-- Pilih --</option>
+            <option>User</option>
+            <option>Admin</option>
+        </select>
+
+            <textarea id="pesan" rows="4"  placeholder="Pesan"></textarea>
+            
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <div id="hasilPendaftaran"></div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
