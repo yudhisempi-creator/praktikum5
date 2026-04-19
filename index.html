@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <header class="navbar">
 <div class="nav-container">
 <h3>Yudhistira</h3>
@@ -95,35 +96,7 @@
 <p>© 2026 Yudhistira</p>
 </footer>
 
-<script>
-// SCROLL ANIMATION
-const sections=document.querySelectorAll("section")
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
-sec.style.opacity=1
-sec.style.transform="translateY(0)"
-}
-})
-})
 
-// FORM
-const form=document.getElementById("form")
-const hasil=document.getElementById("hasil")
-
-form.addEventListener("submit",(e)=>{
-e.preventDefault()
-let nama=document.getElementById("nama").value
-let email=document.getElementById("email").value
-let pesan=document.getElementById("pesan").value
-
-if(!nama||!email||!pesan){alert("Isi semua data");return}
-if(!email.includes("@")){alert("Email tidak valid");return}
-
-hasil.innerHTML=`<p>Pesan terkirim dari <b>${nama}</b></p>`
-form.reset()
-})
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
