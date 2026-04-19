@@ -1,145 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Yudhistira</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yudhistira Portfolio</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial;background:#2C2C2C;color:white}
+
+.navbar{position:fixed;width:100%;top:0;background:#121212;border-bottom:2px solid #2196F3;z-index:1000}
+.nav-container{max-width:1000px;margin:auto;padding:15px;display:flex;justify-content:space-between}
+.nav-menu a{color:white;margin-left:20px;text-decoration:none}
+
+.hero{text-align:center;padding:120px 20px 40px}
+.hero img{width:140px;height:140px;border-radius:50%;border:4px solid #2196F3}
+
+main{max-width:1000px;margin:auto;padding:20px}
+section{margin-bottom:40px;opacity:0;transform:translateY(30px);transition:0.5s}
+
+article{background:#1E1E1E;padding:15px;border-radius:10px;border:1px solid #2196F3;margin-bottom:15px}
+
+.skill-bar{margin-bottom:10px}
+.bar{background:#333;border-radius:5px}
+.bar span{display:block;height:8px;background:#2196F3}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+
+button{background:#121212;color:white;border:1px solid #2196F3;padding:10px;margin-top:10px}
+
+footer{text-align:center;padding:20px;background:#121212;border-top:2px solid #2196F3}
+
+.light{background:#f4f4f4;color:black}
+.light article{background:white}
+</style>
+</head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="nav-container">
-            <h2 class="logo">Yudhistira Empi</h2>
-            <nav class="nav-menu">
-                <a href="#tentang">Tentang</a>
-                <a href="#skill">Skill</a>
-                <a href="#proyek">Proyek</a>
-                <a href="#kontak">Kontak</a>
-            </nav>
-        </div>
-    </header>
+<header class="navbar">
+<div class="nav-container">
+<h2>Yudhistira</h2>
+<div class="nav-menu">
+<a href="#tentang">Tentang</a>
+<a href="#skill">Skill</a>
+<a href="#proyek">Proyek</a>
+<a href="#kontak">Kontak</a>
+</div>
+</div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <img src="ydhs.jpeg" alt="Foto Profil">
-        <p>UI/UX Designer & Frontend Developer</p>
-    </section>
+<section class="hero">
+<img src="ydhs.jpeg">
+<h2>Frontend Developer</h2>
+<p>Membangun UI yang cepat, bersih, dan mudah digunakan</p>
+<button onclick="toggleMode()">Toggle Mode</button>
+</section>
 
-    <!-- MAIN CONTENT -->
-    <main>
+<main>
 
-        <!-- TENTANG -->
-        <section id="tentang">
-            <h3>Tentang Saya</h3>
-            <article>
-                <p>
-                    Saya adalah mahasiswa yang fokus pada UI/UX Design dan Frontend Development.
-                    Saya terbiasa merancang antarmuka yang sederhana dan intuitif, lalu
-                    mengimplementasikannya menjadi website yang responsif dan mudah digunakan.
-                </p>
-            </article>
-        </section>
+<section id="tentang">
+<h3>Tentang Saya</h3>
+<article>
+<p>Saya fokus membangun interface yang tidak hanya menarik, tetapi juga intuitif dan mudah dipahami dalam hitungan detik. Saya terbiasa mengubah desain menjadi website responsive yang siap digunakan.</p>
+</article>
+</section>
 
-        <!-- SKILL -->
-        <section id="skill">
-            <h3>Keahlian</h3>
-            <div class="skill-container">
+<section id="skill">
+<h3>Skill</h3>
+<article>
+<div class="skill-bar"><p>HTML</p><div class="bar"><span style="width:90%"></span></div></div>
+<div class="skill-bar"><p>CSS</p><div class="bar"><span style="width:85%"></span></div></div>
+<div class="skill-bar"><p>UI/UX</p><div class="bar"><span style="width:80%"></span></div></div>
+</article>
+</section>
 
-                <article>
-                    <h4>UI/UX</h4>
-                    <ul>
-                        <li>Wireframing</li>
-                        <li>Prototyping</li>
-                        <li>User Flow</li>
-                    </ul>
-                </article>
+<section id="proyek">
+<h3>Proyek</h3>
+<div class="grid">
+<article>
+<h4>BeFit</h4>
+<p>Aplikasi olahraga berbasis challenge</p>
+<p><b>Role:</b> UI/UX, Frontend</p>
+</article>
+<article>
+<h4>SpoorGo</h4>
+<p>Pemesanan tiket kereta</p>
+<p><b>Role:</b> Frontend</p>
+</article>
+<article>
+<h4>NeoBidan</h4>
+<p>Aplikasi kesehatan ibu hamil</p>
+<p><b>Role:</b> UI/UX</p>
+</article>
+</div>
+</section>
 
-                <article>
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Responsive</li>
-                    </ul>
-                </article>
+<section id="kontak">
+<h3>Kontak</h3>
+<form id="form">
+<input id="nama" placeholder="Nama">
+<input id="email" placeholder="Email">
+<input id="hp" placeholder="No HP">
+<textarea id="pesan" placeholder="Pesan"></textarea>
+<button>Kirim</button>
+</form>
+<div id="hasil"></div>
+</section>
 
-                <article>
-                    <h4>Tools</h4>
-                    <ul>
-                        <li>Figma</li>
-                        <li>VS Code</li>
-                        <li>Canva</li>
-                    </ul>
-                </article>
+</main>
 
-            </div>
-        </section>
+<footer>
+<p>© 2026 Yudhistira</p>
+</footer>
 
-        <!-- PROYEK -->
-        <section id="proyek">
-            <h3>Proyek</h3>
-            <div class="project-container">
+<script>
 
-                <article>
-                    <h4>BeFit</h4>
-                    <p>Aplikasi olahraga berbasis tantangan</p>
-                </article>
+// ANIMATION
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top < window.innerHeight-100){
+sec.style.opacity=1;
+sec.style.transform="translateY(0)";
+}
+})
+})
 
-                <article>
-                    <h4>Web SpoorGo</h4>
-                    <p>Aplikasi pemesanan kereta api</p>
-                </article>
+// DARK MODE
+function toggleMode(){
+document.body.classList.toggle("light")
+}
 
-                <article>
-                    <h4>NeoBidan</h4>
-                    <p>Aplikasi cek kesehatan khusus untuk ibu hamil</p>
-                </article>
+// FORM
+const form=document.getElementById("form")
+const hasil=document.getElementById("hasil")
 
-            </div>
-        </section>
+form.addEventListener("submit",(e)=>{
+e.preventDefault()
 
-        <!-- KONTAK -->
-        <section id="kontak">
-            <h3>Form Pendaftaran</h3>
+let nama=document.getElementById("nama").value
+let email=document.getElementById("email").value
+let hp=document.getElementById("hp").value
+let pesan=document.getElementById("pesan").value
 
-            <form id="formPendaftaran">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" placeholder="Nama" required>
+if(!nama||!email||!hp||!pesan){alert("Isi semua!");return}
+if(!email.includes("@")){alert("Email tidak valid");return}
+if(isNaN(hp)){alert("HP harus angka");return}
 
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email" required>
+localStorage.setItem("data",JSON.stringify({nama,email,hp,pesan}))
 
-                <label for="nohp">No. HP</label>
-                <input type="text" id="nohp" placeholder="No. HP" required>
+hasil.innerHTML=`<article><h3>Berhasil ✅</h3><p>${nama}</p><p>${email}</p><p>${hp}</p><p>${pesan}</p></article>`
 
-                <label for="kategori">Kategori</label>
-                <select id="kategori" required>
-                    <option value="">-- Pilih --</option>
-                    <option>User</option>
-                    <option>Admin</option>
-                </select>
+form.reset()
+})
 
-                <label for="pesan">Pesan</label>
-                <textarea id="pesan" rows="4" placeholder="Pesan"></textarea>
+</script>
 
-                <button type="submit">Kirim</button>
-            </form>
-            <br>    
-            <div id="hasilPendaftaran"></div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Yudhistira Empi</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
-
 </html>
