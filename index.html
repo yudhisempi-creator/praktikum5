@@ -3,44 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yudhistira Portfolio</title>
+<title>Yudhistira | Frontend Developer</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial;background:#2C2C2C;color:white}
+<!-- PANGGIL CSS -->
+<link rel="stylesheet" href="style.css">
 
-.navbar{position:fixed;width:100%;top:0;background:#121212;border-bottom:2px solid #2196F3;z-index:1000}
-.nav-container{max-width:1000px;margin:auto;padding:15px;display:flex;justify-content:space-between}
-.nav-menu a{color:white;margin-left:20px;text-decoration:none}
-
-.hero{text-align:center;padding:120px 20px 40px}
-.hero img{width:140px;height:140px;border-radius:50%;border:4px solid #2196F3}
-
-main{max-width:1000px;margin:auto;padding:20px}
-section{margin-bottom:40px;opacity:0;transform:translateY(30px);transition:0.5s}
-
-article{background:#1E1E1E;padding:15px;border-radius:10px;border:1px solid #2196F3;margin-bottom:15px}
-
-.skill-bar{margin-bottom:10px}
-.bar{background:#333;border-radius:5px}
-.bar span{display:block;height:8px;background:#2196F3}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-
-button{background:#121212;color:white;border:1px solid #2196F3;padding:10px;margin-top:10px}
-
-footer{text-align:center;padding:20px;background:#121212;border-top:2px solid #2196F3}
-
-.light{background:#f4f4f4;color:black}
-.light article{background:white}
-</style>
 </head>
 <body>
 
 <header class="navbar">
 <div class="nav-container">
-<h2>Yudhistira</h2>
+<h3>Yudhistira</h3>
 <div class="nav-menu">
 <a href="#tentang">Tentang</a>
 <a href="#skill">Skill</a>
@@ -52,60 +25,68 @@ footer{text-align:center;padding:20px;background:#121212;border-top:2px solid #2
 
 <section class="hero">
 <img src="ydhs.jpeg">
-<h2>Frontend Developer</h2>
-<p>Membangun UI yang cepat, bersih, dan mudah digunakan</p>
-<button onclick="toggleMode()">Toggle Mode</button>
+<h1>Hi, I'm <span>Yudhistira</span></h1>
+<p>Frontend Developer yang fokus pada UI cepat, bersih, dan user-friendly</p>
+<a href="#kontak" class="cta">Hire Me</a>
 </section>
 
 <main>
 
 <section id="tentang">
-<h3>Tentang Saya</h3>
-<article>
-<p>Saya fokus membangun interface yang tidak hanya menarik, tetapi juga intuitif dan mudah dipahami dalam hitungan detik. Saya terbiasa mengubah desain menjadi website responsive yang siap digunakan.</p>
-</article>
+<h2>Tentang Saya</h2>
+<div class="card">
+<p>Saya adalah Frontend Developer dengan fokus pada pembuatan interface yang intuitif dan efisien. Saya terbiasa mengubah desain menjadi website responsif dengan performa optimal serta pengalaman pengguna yang baik.</p>
+</div>
 </section>
 
 <section id="skill">
-<h3>Skill</h3>
-<article>
-<div class="skill-bar"><p>HTML</p><div class="bar"><span style="width:90%"></span></div></div>
-<div class="skill-bar"><p>CSS</p><div class="bar"><span style="width:85%"></span></div></div>
-<div class="skill-bar"><p>UI/UX</p><div class="bar"><span style="width:80%"></span></div></div>
-</article>
+<h2>Skill</h2>
+<div class="card">
+<div class="skill"><p>HTML</p><div class="bar"><span style="width:90%"></span></div></div>
+<div class="skill"><p>CSS</p><div class="bar"><span style="width:85%"></span></div></div>
+<div class="skill"><p>UI/UX</p><div class="bar"><span style="width:80%"></span></div></div>
+</div>
 </section>
 
 <section id="proyek">
-<h3>Proyek</h3>
+<h2>Proyek</h2>
 <div class="grid">
-<article>
-<h4>BeFit</h4>
-<p>Aplikasi olahraga berbasis challenge</p>
-<p><b>Role:</b> UI/UX, Frontend</p>
-</article>
-<article>
-<h4>SpoorGo</h4>
-<p>Pemesanan tiket kereta</p>
-<p><b>Role:</b> Frontend</p>
-</article>
-<article>
-<h4>NeoBidan</h4>
-<p>Aplikasi kesehatan ibu hamil</p>
-<p><b>Role:</b> UI/UX</p>
-</article>
+
+<div class="card project">
+<img src="BeFitt.png">
+<h3>BeFit</h3>
+<p>Aplikasi olahraga berbasis challenge untuk meningkatkan konsistensi user.</p>
+<a href="#">Live Demo</a>
+</div>
+
+<div class="card project">
+<img src="SpoorGO.png">
+<h3>SpoorGo</h3>
+<p>Aplikasi pemesanan tiket kereta dengan UI sederhana dan cepat.</p>
+<a href="#">GitHub</a>
+</div>
+
+<div class="card project">
+<img src="neobidan.png">
+<h3>NeoBidan</h3>
+<p>Aplikasi kesehatan ibu hamil berbasis monitoring.</p>
+<a href="#">Detail</a>
+</div>
+
 </div>
 </section>
 
 <section id="kontak">
-<h3>Kontak</h3>
+<h2>Kontak</h2>
+<div class="card">
 <form id="form">
 <input id="nama" placeholder="Nama">
 <input id="email" placeholder="Email">
-<input id="hp" placeholder="No HP">
 <textarea id="pesan" placeholder="Pesan"></textarea>
 <button>Kirim</button>
 </form>
 <div id="hasil"></div>
+</div>
 </section>
 
 </main>
@@ -115,22 +96,16 @@ footer{text-align:center;padding:20px;background:#121212;border-top:2px solid #2
 </footer>
 
 <script>
-
-// ANIMATION
-const sections = document.querySelectorAll("section");
+// SCROLL ANIMATION
+const sections=document.querySelectorAll("section")
 window.addEventListener("scroll",()=>{
 sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top < window.innerHeight-100){
-sec.style.opacity=1;
-sec.style.transform="translateY(0)";
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.style.opacity=1
+sec.style.transform="translateY(0)"
 }
 })
 })
-
-// DARK MODE
-function toggleMode(){
-document.body.classList.toggle("light")
-}
 
 // FORM
 const form=document.getElementById("form")
@@ -138,23 +113,16 @@ const hasil=document.getElementById("hasil")
 
 form.addEventListener("submit",(e)=>{
 e.preventDefault()
-
 let nama=document.getElementById("nama").value
 let email=document.getElementById("email").value
-let hp=document.getElementById("hp").value
 let pesan=document.getElementById("pesan").value
 
-if(!nama||!email||!hp||!pesan){alert("Isi semua!");return}
+if(!nama||!email||!pesan){alert("Isi semua data");return}
 if(!email.includes("@")){alert("Email tidak valid");return}
-if(isNaN(hp)){alert("HP harus angka");return}
 
-localStorage.setItem("data",JSON.stringify({nama,email,hp,pesan}))
-
-hasil.innerHTML=`<article><h3>Berhasil ✅</h3><p>${nama}</p><p>${email}</p><p>${hp}</p><p>${pesan}</p></article>`
-
+hasil.innerHTML=`<p>Pesan terkirim dari <b>${nama}</b></p>`
 form.reset()
 })
-
 </script>
 
 </body>
